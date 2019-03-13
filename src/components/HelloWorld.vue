@@ -15,7 +15,9 @@
 
         },
         created(){
-
+            console.log(this.utils.getNowMonth());
+            console.log(this.utils.getNowDate());
+            console.log(this.utils.getTime());
         }
     }
 </script>
