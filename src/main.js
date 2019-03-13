@@ -3,6 +3,11 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import ElementUI from 'element-ui';
+import 'element-ui/lib/theme-chalk/index.css';
+import store from "./store/store.js"
+
+Vue.use(ElementUI);
 
 Vue.config.productionTip = false
 
@@ -10,6 +15,16 @@ Vue.config.productionTip = false
 new Vue({
     el: '#app',
     router,
+    store,
     components: { App },
-    template: '<App/>'
+    template: '<App/>',
+
+    created() { //刷新重新赋值。
+        var val = this.$store.getters.getCityFn;
+        if (!val && localStorage.getItem("state") != 'null') {
+            var num = localStorage.getItem("state");
+            this.$store.dispatch("setCityName", num)
+        }
+    }
+
 })
