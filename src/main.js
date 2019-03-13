@@ -5,8 +5,8 @@ import App from './App'
 import router from './router'
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
-import '../static/reset.css';
-import store from "./store/store.js"
+import '../static/reset.css'; // 清除全局样式
+import store from "./store/store.js" // vuex
 
 
 
