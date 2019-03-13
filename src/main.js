@@ -7,11 +7,24 @@ import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
 import store from "./store/store.js"
 
+
+
 Vue.use(ElementUI);
+
+
+import utils from "./utils/utils.js"; // 引入封装的全局方法
+Vue.prototype.utils = utils; //引入到原型上。
+
+import https from "./utils/axios.js"; //引入封装的axios  
+Vue.prototype.https = https; //引入到原型上。
+
+import * as filters from './utils/filters' //其中import * as filters from ‘./filters/filter.js’是导入filter.js文件中的所有过滤器
+Object.keys(filters).forEach(key => {
+    Vue.filter(key, filters[key]);
+})
 
 Vue.config.productionTip = false
 
-/* eslint-disable no-new */
 new Vue({
     el: '#app',
     router,

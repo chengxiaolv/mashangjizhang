@@ -10,7 +10,20 @@ module.exports = {
         // Paths
         assetsSubDirectory: 'static',
         assetsPublicPath: '/',
-        proxyTable: {},
+        proxyTable: {
+            "/service": {
+                target: "http://hospital.tzucpa.cn",
+                // target: "http://61.135.242.160:8090//api/v1",
+
+                changeOrigin: true,
+                secure: false,
+
+                // pathRewrite: {
+                //反向代理的话， 如果是传参的形式。 一定加上下面这段代码
+                //     '^/service': ''
+                // }
+            }
+        },
 
         // Various Dev Server settings
         host: 'localhost', // can be overwritten by process.env.HOST
