@@ -24,6 +24,26 @@ Object.keys(filters).forEach(key => {
     Vue.filter(key, filters[key]);
 })
 
+// 引入图片预览功能。
+import 'viewerjs/dist/viewer.css'
+import Viewer from 'v-viewer'
+Vue.use(Viewer)
+
+// 全局注册组件
+Vue.component('tabBarList', resolve => require(['./common/common_assemblys/tabBarList.vue'], resolve)); // 状态列表（比如待处理、进行中、已完成等）
+Vue.component('tabBar', resolve => require(['./common/common_assemblys/tabBar.vue'], resolve)); // 标签页按钮
+Vue.component('breadcrumb', resolve => require(['./common/common_assemblys/breadcrumb.vue'], resolve)); // 面包屑
+Vue.component('listSelect', resolve => require(['./common/common_assemblys/listSelect.vue'], resolve)); // 列表查询搜索框
+Vue.component('secondaryBtn', resolve => require(['./common/common_assemblys/secondaryBtn.vue'], resolve)); // 次级辅色按钮集合
+Vue.component('auxiliaryBtn', resolve => require(['./common/common_assemblys/auxiliaryBtn.vue'], resolve)); // 辅色按钮集合
+Vue.component('mainBtn', resolve => require(['./common/common_assemblys/mainBtn.vue'], resolve)); // 主色按键
+Vue.component('deletePopup', resolve => require(['./common/common_assemblys/deletePopup.vue'], resolve)); // 删除弹窗
+Vue.component('myUpload', resolve => require(['./common/common_assemblys/myUpload.vue'], resolve)); // 上传文件组件
+Vue.component('uploadFile', resolve => require(['./common/common_assemblys/uploadFile.vue'], resolve)); // 上传展示成功文件。
+Vue.component('previewImg', resolve => require(['./common/common_assemblys/previewImg.vue'], resolve)); // 预览pdf格式的上传文件
+Vue.component('annexDownload', resolve => require(['./common/common_assemblys/annexDownload.vue'], resolve)); // 文件下载按钮
+
+
 Vue.config.productionTip = false
 
 new Vue({

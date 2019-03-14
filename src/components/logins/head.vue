@@ -1,5 +1,6 @@
 <template>
   <div class="head-wrapper">
+        <span class="seeCommonAssemblys" @click="seeCommonAssemblys">查看组件实列</span>
 		<el-popover popper-class="user-click-popper" placement="bottom" trigger="hover" v-model="popover">
 			<!-- <el-button type="text" class="">切换单位</el-button><br> -->
 			<el-button type="text" class="operation">设置</el-button><br>
@@ -43,6 +44,9 @@ export default {
     methods: {
 		logOut(){
             this.$router.push("/login")
+        },
+        seeCommonAssemblys(){
+            window.open("/#/commonAssemblysExample");
         }
 	}
 }
@@ -101,6 +105,17 @@ export default {
             color: #ffffff;
             font-size: 13px;
             cursor: default;
+        }
+        .seeCommonAssemblys{
+            margin-left: 230px;
+            height: 60px;
+            line-height: 60px;
+            color:#fff;
+            font-size: 18px;
+            cursor: pointer;
+            &:hover{
+                text-decoration: underline;
+            }
         }
 	}
 	.click {

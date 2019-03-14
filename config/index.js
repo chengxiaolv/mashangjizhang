@@ -12,7 +12,7 @@ module.exports = {
         assetsPublicPath: '/',
         proxyTable: {
             "/service": {
-                target: "http://hospital.tzucpa.cn",
+                target: "http://v5test.tzucpa.cn",
                 // target: "http://61.135.242.160:8090//api/v1",
 
                 changeOrigin: true,

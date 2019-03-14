@@ -75,12 +75,12 @@ axios.interceptors.response.use(
         // 如果返回的状态码为200，说明接口请求成功，可以正常拿到数据
         // 否则的话抛出错误
         if (response.status === 200) {
-            if (response.data.statusCode == '10001') {
-                // 失败时 跳转登录页
-                router.push({
-                    path: "/tupianyulan"
-                });
-            }
+            // if (response.data.statusCode == '10001') {
+            //     // 失败时 跳转登录页
+            //     router.push({
+            //         path: "/tupianyulan"
+            //     });
+            // }
             return Promise.resolve(response);
         } else {
             return Promise.reject(response);
