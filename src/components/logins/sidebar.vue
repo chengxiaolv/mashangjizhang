@@ -1,21 +1,18 @@
 <template>
   <div class="menu">
     <div class="menu_head">
-        <div style="height: 30px;width: 100%;margin-top:35px;"><img src="../../assets/tzucpaLogo.png" style="width: 54px;height: 40px;"/></div>
+        <div style="height: 30px;width: 100%;margin-top:50px;"><img src="../../assets/tzucpaLogo.png" style="width: 54px;height: 40px;"/></div>
         <div class="companyNameBox">
-                <span class="companyNameOne">天津中审联办公管理系统</span><br>
-                <span>saf </span>
+                <span class="companyNameOne">马上记账管理系统</span><br>
         </div>
     </div>
     <div class="side_divider"></div>
     <div class="nav_menu">
         <el-menu background-color="#334B72" text-color="#fff" router :default-active="$route.path" :unique-opened="true">
-        
             <el-menu-item  class="nav_menu_item" index="/homePage" >
                 <i class="iconfont icon-bid"></i>
                 <span class="title">首页</span>
             </el-menu-item>
-
         </el-menu>
     </div>
   </div>

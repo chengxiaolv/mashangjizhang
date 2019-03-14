@@ -20,4 +20,8 @@
         height:100%;
         width:100%;
     }
+    .abroadContent{
+        background-color: #f2f2f2;
+        padding: 20px 2% 20px;
+    }
 </style>

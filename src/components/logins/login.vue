@@ -38,7 +38,7 @@
         },
         methods:{
             login(){
-                this.$router.push("/main")
+                this.$router.push("/homePage")
             }
         }
     }

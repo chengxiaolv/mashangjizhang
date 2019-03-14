@@ -33,14 +33,12 @@ export default {
  
 <style lang="scss" scoped>
     #apps {
-        height: 100%;
-        overflow: hidden;
+        padding-top: 60px;
+        height: calc(100% - 60px);
+        background-color: #f2f2f2;
     }
     .containers{
-        margin: 60px 0px 0px 200px;
-        padding: 20px 2% 20px;
-        height: calc(100% -200px);
-        background-color: #f2f2f2;
+        margin: 0px 0px 0px 200px;
     }
 
 </style>

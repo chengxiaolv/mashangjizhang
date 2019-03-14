@@ -1,16 +1,16 @@
 <template>
   <div class="head-wrapper">
-		<el-popover popper-class="user-click-popper" placement="bottom" trigger="hover">
-			<el-button type="text" >切换单位</el-button><br>
-			<el-button type="text">设置</el-button><br>
-			<el-button type="text">退出</el-button>
+		<el-popover popper-class="user-click-popper" placement="bottom" trigger="hover" v-model="popover">
+			<!-- <el-button type="text" class="">切换单位</el-button><br> -->
+			<el-button type="text" class="operation">设置</el-button><br>
+			<el-button type="text" @click="popupShow = true;popover = false" class="operation">退出</el-button>
 			<div class="user click" slot="reference">
 				<div class="user_photo">
 					<img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1536126990316&di=00e73b0e32c74b46a866fa0c83772c1a&imgtype=0&src=http%3A%2F%2Fpic.qiantucdn.com%2F58pic%2F13%2F19%2F78%2F82f58PICnxS_1024.jpg">
 				</div>
 				<div class="user_name">彭于晏</div>
 				<div class="icon">
-					<i class="iconfont icon-xiasanjiao"></i>  
+					<i class="el-icon-caret-bottom"></i>  
 				</div>
 			</div>
 		</el-popover>
@@ -20,8 +20,8 @@
       <el-dialog :show-close="false" :visible.sync="popupShow" center>
         <div class="al-c">是否确认退出？</div>
         <div class="dialog-footer">
-          <el-button class="cancel">取消</el-button>
-          <el-button class="sure" >确定</el-button>
+            <el-button class="cancel" @click="popupShow = false">取消</el-button>
+            <el-button class="sure" @click="logOut">确定</el-button>
         </div>
       </el-dialog>
     </div>
@@ -33,7 +33,8 @@ import axios from 'axios';
 export default {
 	data() {
 		return {
-            popupShow: false
+            popupShow: false,
+            popover: false
 		}
 	},
 
@@ -42,7 +43,9 @@ export default {
 	},
 
     methods: {
-		
+		logOut(){
+            this.$router.push("/login")
+        }
 	}
 }
 </script>
@@ -57,7 +60,7 @@ export default {
         background: #6BBDDE;
         z-index: 10000;
         .user {
-            width: auto;
+                width: auto;
             float: right;
             height: 40px;
             margin-right: 45px;
@@ -89,6 +92,8 @@ export default {
                 margin-right: 5px;
                 line-height: 40px;
                 color:#818699;
+                font-size: 20px;
+                font-weight: bold;
             }
         }
         .welcome {
@@ -100,12 +105,25 @@ export default {
             font-size: 13px;
             cursor: default;
         }
-    }
+	}
 	
 	.click {
-        cursor: pointer;
+		cursor: pointer;
     }
     .al-c {
         text-align: center;
+    }
+    .operation{
+        color: #818699;
+        text-align: center;
+        display: block;
+        width: 100%;
+        font-size: 15px;
+        &:hover{
+            background-color: #6BBDDE;
+        }
+    }
+    .operation:last-child{
+        margin-top: -10px;
     }
 </style>
