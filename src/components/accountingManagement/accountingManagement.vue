@@ -2,7 +2,7 @@
     <!-- 下面是固定 abroadContent 最外层是固定布局方式 -->
     <div class="abroadContent">  
         <div class="content">
-            首页
+            账务管理
         </div>
     </div>
 </template>
@@ -21,18 +21,9 @@
 </script>
 
 <style scoped lang="scss">
-    .abroadContent{  // 布局方式 一  版心布局
-        height: calc(100% - 40px);  
+    .abroadContent{ 
         .content{
             background: #fff;
-            height: 100%;
-            overflow: auto;
         }
     }
-
-    // .abroadContent{ // 布局方式 二  延申布局
-    //     .content{
-    //         background: #fff;
-    //     }
-    // }
 </style>

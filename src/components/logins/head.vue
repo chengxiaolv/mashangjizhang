@@ -37,11 +37,9 @@ export default {
             popover: false
 		}
 	},
-
 	created() {
 
 	},
-
     methods: {
 		logOut(){
             this.$router.push("/login")
@@ -51,7 +49,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
     .head-wrapper {
         position: fixed;
         height: 60px;
@@ -106,7 +103,6 @@ export default {
             cursor: default;
         }
 	}
-	
 	.click {
 		cursor: pointer;
     }

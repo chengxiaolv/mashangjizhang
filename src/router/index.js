@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import login from '@/components/logins/login.vue'
 import main from '@/components/logins/main.vue'
 import homePage from '@/components/homePage/homePage.vue'
+import accountingManagement from '@/components/accountingManagement/accountingManagement.vue'
 
 Vue.use(Router)
 
@@ -33,6 +34,10 @@ export default new Router({
                 path: '/homePage',
                 name: 'homePage',
                 component: homePage
+            }, {
+                path: '/accountingManagement',
+                name: 'accountingManagement',
+                component: accountingManagement
             }]
         }
     ]
