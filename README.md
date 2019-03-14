@@ -26,9 +26,15 @@ npm run e2e
 # run all tests
 npm test
 
+```
+
+
+```
 # 技术
     vue vuex element-ui scss axios
+```
 
+```
 # 主要文件夹说明
     utils文件夹下面
         xiaos.js    --->   xiaos的重新封装  
@@ -48,16 +54,18 @@ npm test
                 .catch(response => {
 
                 });
+
+
         filters.js  --->   全局过滤器   (已经注册到vue实列的原型上了)
-            使用：  {{ num | 过滤器名称}}
-               
+            使用：   {{ val | 过滤器名称}}
+                    {{ val | 过滤器名称 | 过滤器名称 ...}}
+
         utils.js    --->   全局方法     (已经注册到vue实列的原型上了)
             使用：  this.utils.全局方法名称
-                
+```                
         
-
+```
 # 布局方式
-    ```
         <template>
         <!-- 下面是固定 abroadContent 最外层是固定布局方式 类名是固定的 -->
         <div class="abroadContent"> 
@@ -98,8 +106,5 @@ npm test
                 }
             }
         </style>
-    ```
 
 ```
-
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
