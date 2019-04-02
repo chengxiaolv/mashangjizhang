@@ -20,11 +20,7 @@
         height:100%;
         width:100%;
     }
-    .abroadContent{
-        background-color: #f2f2f2;
-        padding: 20px 2% 20px;
-    }
-
+    
     .my-tab-wrapper { // tabBar 公共组件的样式重新。
         .el-tabs__nav {
             z-index: 0;
